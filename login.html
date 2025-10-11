@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicia Sesión - Pixel & Slice </title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<header class="navbar">
+  <a href="" class="logo">
+    <img src="../login/login.png" alt="PS" style="height:70px;">
+  </a>
+  <nav>
+    <ul></ul>
+  </nav>
+</header>
+
+<section class="login-section">
+  <div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+      <input id="email" type="email" placeholder="Correo electrónico" required>
+      <input id="password" type="password" placeholder="Contraseña" required>
+      <button type="submit">Iniciar Sesión</button>
+      <button type="button" onclick="window.location.href='registro.html'" class="secundario">Regístrate</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Pixel & Slice. Todos los derechos reservados.</p>
+</footer>
+
+<script type="module">
+  import { login } from "../auth/auth.js";
+
+  const form = document.getElementById('loginForm');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+
+    try {
+      await login({ email, password });
+      // Redirección directa al catálogo tras iniciar sesión
+      window.location.href = "../catalogo/catalogo.html"
+    } catch (err) {
+      alert("No se pudo iniciar sesión: " + (err.message || "Error"));
+    }
+  });
+</script>
+</body>
+</html>
