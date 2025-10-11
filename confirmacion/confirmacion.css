@@ -1,0 +1,141 @@
+/* ===========================
+   Pixel & Slice - Login/Registro
+   Paleta adaptada al logo
+   =========================== */
+
+:root {
+  --color-fondo: #1b1421;        /* Fondo oscuro violáceo */
+  --color-navbar: #2a2032;       /* Más claro que el fondo, tono púrpura */
+  --color-acento: #f7b546;       /* Amarillo/naranja del logo */
+  --color-acento-sec: #f38b2a;   /* Naranja más intenso */
+  --color-texto: #f3e9dc;        /* Beige claro, contraste suave */
+  --color-subtexto: #c8bfb5;     /* Tono más apagado para texto secundario */
+  --color-ocupado: #c2463a;      /* Rojo-naranja discreto */
+  --color-seleccionado: #f7b546; /* Mismo acento principal */
+  --color-disponible: #3d2f46;   /* Gris púrpura tenue para fondos */
+
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+}
+
+
+:root {
+  --color-fondo: #1A1A24;
+  --color-navbar: #2D2D3A;
+  --color-acento: #F5B544;
+  --color-acento-sec: #1E5A88;
+  --color-texto: #F4E1C1;
+  --color-subtexto: #B8B8C6;
+  --color-exito: #3bb54a;
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding-top: 90px;
+  margin: 0;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background: var(--color-navbar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.navbar .logo img { height: 70px; }
+
+/* CONFIRMACIÓN */
+.confirmacion-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.confirmacion-card {
+  background: rgba(45,45,58,0.95);
+  border-radius: 18px;
+  max-width: 420px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.confirmacion-header {
+  background: var(--color-exito);
+  padding: 12px;
+  color: white;
+}
+
+.confirmacion-body {
+  padding: 30px;
+}
+
+.icono-check {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #eafaf1;
+  color: var(--color-exito);
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmacion-body h1 {
+  margin: 10px 0;
+  color: var(--color-acento);
+}
+
+.confirmacion-body .orden a {
+  color: var(--color-acento-sec);
+  text-decoration: none;
+}
+
+.detalle-pago {
+  margin-top: 20px;
+  background: rgba(26,26,36,0.85);
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.confirmacion-footer {
+  padding: 20px;
+}
+
+.btn-pedidos {
+  background: var(--color-acento);
+  color: var(--color-fondo);
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-pedidos:hover {
+  background: var(--color-acento-sec);
+  color: white;
+}
+
+/* FOOTER */
+footer {
+  background: var(--color-navbar);
+  text-align: center;
+  padding: 20px;
+  color: var(--color-subtexto);
+  font-size: 14px;
+  margin-top: auto;
+  border-top: 2px solid var(--color-acento-sec);
+}

@@ -15,14 +15,13 @@ function loadReceipt() {
 
   paintFromDraft(draft);
 
-  // Botón de pago
-  const btn = $("btnPagar");
-  if (btn) {
-    btn.addEventListener("click", () => {
-      // Aquí defines la acción del pago
-      window.location.href = "../pago/pago.html";
-    });
-  }
+// Botón de pago
+const btn = $("btnPagar");
+if (btn) {
+  btn.addEventListener("click", () => {
+    window.location.href = "../confirmacion/confirmacion.html";
+  });
+}
 }
 
 function paintFromDraft(draft) {
