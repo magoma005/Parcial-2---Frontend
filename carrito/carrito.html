@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras - Pixel & Slice</title>
+  <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+<header class="navbar">
+  <a href="../catalogo/catalogo.html" class="logo">
+    <img src="../login/login.png" alt="PS">
+  </a>
+  <nav>
+    <ul>
+    </ul>
+  </nav>
+</header>
+
+<main class="carrito-main">
+  <h1>🛒 Carrito de Compras</h1>
+
+  <!-- Lista de productos -->
+  <section id="carrito-items" class="carrito-items"></section>
+
+  <!-- Resumen de costos -->
+  <section class="carrito-resumen">
+    <h3>Resumen de Pago</h3>
+    <p>Subtotal: <span id="subtotal"></span></p>
+    <p class="total">Total: <span id="total"></span></p>
+  </section>
+
+  <!-- Botones -->
+  <div class="botones">
+    <button id="btnPagar">Proceder al pago</button>
+    <a href="../catalogo/catalogo.html" class="btn-volver">Volver al catálogo</a>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Pixel & Slice. Todos los derechos reservados.</p>
+</footer>
+
+<script src="carrito.js" defer></script>
+</body>
+</html>
