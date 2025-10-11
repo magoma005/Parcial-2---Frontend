@@ -29,31 +29,6 @@ Permite a los usuarios **registrarse, iniciar sesión, explorar el catálogo de 
 
 ---
 
-## 🧩 Estructura del proyecto
-frontend/
-├── auth/
-│ └── auth.js → Manejo de autenticación, tokens y sesión
-│
-├── login/
-│ ├── login.html → Página de inicio de sesión
-│ ├── registro.html → Página de registro de usuario
-│ └── login.css → Estilos del login y registro
-│
-├── catalogo/
-│ ├── catalogo.html → Catálogo de videojuegos
-│ ├── catalogo.css → Estilos visuales del catálogo
-│ └── catalogo.js → Lógica de carga del catálogo y carrito
-│
-├── carrito/
-│ ├── carrito.html → Vista del carrito de compras
-│ ├── carrito.css → Estilos del carrito
-│ └── carrito.js → Lógica de cantidades, totales y eliminación
-│
-├── confirmacion/
-│ ├── confirmacion.html → Resumen final de compra
-│ ├── confirmacion.css → Estilos del resumen
-│ └── confirmacion.js → Limpieza del carrito y render del resumen
-
 ## 🔗 Conexión con el backend
 
 El frontend se comunica con el backend desplegado en: http://localhost:8080/api
