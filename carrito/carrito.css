@@ -1,0 +1,104 @@
+:root {
+  --color-fondo: #1A1A24;
+  --color-navbar: #2D2D3A;
+  --color-acento: #F5B544;
+  --color-acento-sec: #1E5A88;
+  --color-texto: #F4E1C1;
+  --color-subtexto: #B8B8C6;
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding-top: 90px;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background: var(--color-navbar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.navbar .logo img { height: 70px; }
+
+/* CONTENEDOR */
+.carrito-main {
+  max-width: 900px;
+  margin: 40px auto;
+  background: rgba(45,45,58,0.95);
+  border-radius: 18px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.carrito-main h1 {
+  color: var(--color-acento);
+  text-align: center;
+}
+
+/* ITEMS */
+.carrito-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(26,26,36,0.85);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.carrito-item img {
+  width: 100px;
+  border-radius: 8px;
+}
+
+.carrito-item h2 { color: var(--color-acento); }
+
+/* RESUMEN */
+.carrito-resumen {
+  background: rgba(26,26,36,0.85);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.carrito-resumen h3 { color: var(--color-acento); }
+.carrito-resumen .total { font-weight: bold; color: var(--color-acento-sec); }
+
+/* BOTONES */
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.botones button, .btn-volver {
+  background: var(--color-acento);
+  color: var(--color-fondo);
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  background: var(--color-navbar);
+  text-align: center;
+  padding: 20px;
+  color: var(--color-subtexto);
+  font-size: 14px;
+  margin-top: auto;
+  border-top: 2px solid var(--color-acento-sec);
+}
