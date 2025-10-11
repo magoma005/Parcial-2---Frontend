@@ -139,3 +139,39 @@ footer {
   margin-top: auto;
   border-top: 2px solid var(--color-acento-sec);
 }
+
+/* === Botón principal (confirmación) === */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--color-texto);
+  background: linear-gradient(180deg, rgba(30,90,136,0.28), rgba(30,90,136,0.16));
+  border: 1px solid rgba(30,90,136,0.45);
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-acento-sec);
+  background: linear-gradient(180deg, rgba(30,90,136,0.38), rgba(30,90,136,0.22));
+  box-shadow: 0 10px 26px rgba(0,0,0,0.45);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(245,181,68,0.4);
+}
+

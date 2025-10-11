@@ -1,46 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catalogo - Pixel & Slice </title>
-  <link rel="stylesheet" href="catalogo.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo - Pixel & Slice</title>
+  <link rel="stylesheet" href="catalogo.css"/>
 </head>
 <body>
-<header class="navbar">
-  <a href="" class="logo">
-    <img src="../login/login.png" alt="PS" style="height:70px;">
-  </a>
+  <!-- Navbar -->
+  <header class="navbar">
+    <a href="../catalogo/catalogo.html" class="logo">
+      <img src="../login/login.jpg" alt="PS" style="height:70px;">
+    </a>
     <nav>
       <ul>
+        <li>
+          <a href="../carrito/carrito.html">
+            Carrito <span id="cart-badge" class="cart-badge">0</span>
+          </a>
+        </li>
+        <li><a href="#" id="logout-link">Cerrar sesión</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero del Menú -->
+  <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
-      <h1>🎮 Bienvenido a Nuestro Catalogo de Videojuegos 🎮</h1>
-      <p>Escoge tu favorito:</p>
+      <h1>🎮 Catálogo de Videojuegos</h1>
+      <p>Explora y añade tus favoritos al carrito.</p>
     </div>
   </section>
 
-  <!-- Menú: Playstation -->
+  <!-- Catálogo -->
   <section class="menu">
-    <h2>Playstation</h2>
-    <div id="menu-play" class="juegos"></div>
-  </section>
-
-  <!-- Menú: Xbox -->
-  <section class="menu">
-    <h2>Xbox</h2>
-    <div id="menu-xbox" class="juegos"></div>
-  </section>
-
-  <!-- Menú: Nintendo -->
-  <section class="menu">
-    <h2>Nintendo</h2>
-    <div id="menu-nintendo" class="juegos"></div>
+    <h2>Videojuegos</h2>
+    <div id="catalogo-grid" class="juegos"><!-- Se llena por JS --></div>
   </section>
 
   <!-- Footer -->
@@ -48,7 +43,31 @@
     <p>&copy; 2025 Pixel & Slice. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Script: cargar menú desde el backend -->
+  <!-- Lógica del catálogo -->
   <script src="catalogo.js" defer></script>
+
+  <!-- Control de sesión + logout -->
+  <script type="module">
+    import { isLoggedIn, logout, saveAfterLoginRedirect } from "../auth/auth.js";
+
+    // Requerir sesión para ver el catálogo
+    if (!isLoggedIn()) {
+      saveAfterLoginRedirect("../catalogo/catalogo.html");
+      window.location.href = "../login/login.html";
+    }
+
+    // Cerrar sesión
+    const logoutLink = document.getElementById("logout-link");
+    if (logoutLink) {
+      logoutLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        logout();
+        // (opcional) limpiar badge visual
+        const badge = document.getElementById("cart-badge");
+        if (badge) { badge.textContent = "0"; badge.style.display = "none"; }
+        window.location.href = "../login/login.html";
+      });
+    }
+  </script>
 </body>
 </html>
